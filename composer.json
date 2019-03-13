@@ -3,8 +3,8 @@
     "description": "dingtalk server api",
     "type": "library",
     "require": {
-        "wangju/ding-notice": "1.0.5",
-        "php": ">=7.0"
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "license": "MIT",
     "authors": [
