@@ -4,8 +4,8 @@ namespace Everalan\DingTalk;
 use Everalan\DingTalk\Exceptions\Request;
 use Everalan\DingTalk\Messages\Message;
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Log;
+use think\Facade\Cache;
+use think\Facade\Log;
 
 class DingTalk
 {
@@ -24,14 +24,14 @@ class DingTalk
 
     public function accessToken()
     {
-        return Cache::remember(self::ACCESS_TOKEN_KEY, 60, function() {
+        return Cache::remember(self::ACCESS_TOKEN_KEY, function() {
             return $this->request('GET', '/gettoken', [
                 'query' => [
                     'appkey' => $this->config['appKey'],
                     'appsecret' => $this->config['appSecret'],
                 ],
             ])->access_token;
-        });
+        }, 60);
     }
 
     /**
