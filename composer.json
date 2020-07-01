@@ -1,5 +1,5 @@
 {
-    "name": "everalan/dingtalk",
+    "name": "cyzonetech/dingtalk",
     "description": "DingTalk server API. 钉钉服务器API，支持发送工作通知和机器人消息",
     "type": "library",
     "require": {
