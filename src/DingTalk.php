@@ -4,8 +4,8 @@ namespace Everalan\DingTalk;
 use Everalan\DingTalk\Exceptions\Request;
 use Everalan\DingTalk\Messages\Message;
 use GuzzleHttp\Client;
-use think\Facade\Cache;
-use think\Facade\Log;
+use think\facade\Cache;
+use think\facade\Log;
 
 class DingTalk
 {
